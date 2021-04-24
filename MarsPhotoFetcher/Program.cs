@@ -33,9 +33,6 @@ namespace MarsPhotoFetcher
                 if (manifest.TotalPhotos == 0)
                     continue;
 
-                if (manifest.EarthDate.Year != 2012)
-                    continue;
-
                 photos.AddRange(await api.GetPhotos(
                     Rover.Curiosity, manifest.EarthDate));
 
